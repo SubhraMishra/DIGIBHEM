@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    
+    <h1>Hotel Registration</h1>
+    <div class="container">
+        
+        <form class="form-container" id="myform">
+          <div class="customer-info">
+            <label>Customer Name</label>
+            <input type="text" placeholder="enter your name" id="name" onchange="customer_name(this.value)"/>
+          </div>
+          <div class="customer-info">
+            <label>Check-in Date</label>
+            <input type="date" onchange="check_date(this.value)" />
+          </div>
+          <div class="customer-info">
+            <label>Total No of Days</label>
+            <input type="number" placeholder="enter no of days" onchange="No_of_days(this.value)" />
+          </div>
+          <div class="customer-info">
+            <label>Total No of Persons</label>
+            <input type="number" placeholder="enter no of persons" onchange="No_of_persons(this.value)" />
+          </div>
+          <div class="customer-info">
+            <label>Room Types</label>
+            <select onchange="selectRoom(this.value)">
+              <option>select</option>
+              <option value="delux">Delux Room</option>
+              <option value="suite">Suite Room</option>
+            </select>
+          </div>
+          <div class="customer-info">
+            <label>Amenities</label>
+            <select onchange="selectAmenities(this.value)">
+              <option>select</option>
+              <option value="ac">AC</option>
+              <option value="locker">Locker</option>
+            </select>
+          </div>
+          <div class="customer-info">
+            <label>Advance Payment:</label>
+            <input type="number" onchange="advance_payment(this.value)" />
+          </div>
+          <div class="customer-info" id="finalres">
+
+
+            <div>
+            <label>Total Amount:</label>
+            <span id="total_amount">0</span>
+             </div>
+
+            <div>
+            <label>Balance Amount:</label>
+            <span id="balance_amount">0</span>
+            </div>
+          </div>
+          <div class="button">
+            <button type="button" class="btn" onclick="show()">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div id="Info-container">
+        <h3 class="heading">User Data:</h3>
+      </div>
+     
+
+    
+
+    <script src="script.js"></script>
+</body>
+
+</html>
